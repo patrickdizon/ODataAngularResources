@@ -364,6 +364,10 @@
                         var value = new $odata.Value(0, 'Boolean');
                         expect(value.execute()).toBe('false');
                     });
+                    it('To Int32', function() {
+                        var value = new $odata.Value('10.5', 'Int32');
+                        expect(value.execute()).toBe("10");
+                    });
                     it('To byte 1', function() {
                         var value = new $odata.Value(62, 'Byte');
                         expect(value.execute()).toBe('3e');
