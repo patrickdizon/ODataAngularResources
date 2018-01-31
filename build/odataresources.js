@@ -164,7 +164,7 @@ factory('$odataValue', [
 	        	if(this.type.toLowerCase() === "boolean"){
 	        		return !!this.value+"";
                 }else if(this.type.toLowerCase() === "int32"){
-                    return this.value+"";
+                    return parseInt(this.value)+"";
 	        	}else if(this.type.toLowerCase() === "decimal"){
 	        		return this.value+"M";
 	        	}else if(this.type.toLowerCase() === "double"){
